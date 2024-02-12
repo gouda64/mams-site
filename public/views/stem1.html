@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM I | Erica Dong</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/stem.css">
     <script src="../js/script.js" defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
@@ -121,7 +122,7 @@
             <div class="section">
                 <span class="small"><span class="keyword">public static</span> <span class="type">void</span></span> <span class="section-title">main</span> <span class="small">(<span class="type">String[]</span> <span class="variable">args</span>) {</span>
                 <div class="section-body indented">
-                    <div class="about-me"><span class="small type">String</span> <span class="variable">about</span> <span class="small">=</span> <br> "<span class="highlight"> STEM I is taught by Dr. Crowthers. We conduct a 5-month independent research project on a topic of our choosing, culminating in a presentation at February Fair. More to come soon!</span>"
+                    <div class="about-me"><span class="small type">String</span> <span class="variable">about</span> <span class="small">=</span> <br> "<span class="highlight"> STEM I is taught by Dr. Crowthers. We conduct a 5-month independent research project on a topic of our choosing, culminating in a presentation at February Fair. My project is described below.</span>"
                         <span class="small">;</span></div>
                 </div>
                 <span class="small">}</span>
@@ -130,6 +131,112 @@
 
         <div class="small">
             }
+        </div>
+
+        <div class="stem-title">Using Neural Network Chains to Launch a Preimage Attack on Reduced-Round SHA-1</div>
+
+        <div class="stem-section">
+            <div class="stem-heading">Overview</div>
+            The goal of my project was to develop a new cryptanalytic technique for preimage attacks to take advantage of the rapidly-advancing fields of machine learning. It attempted to deconstruct the hash using neural network chains, but this approach was ultimately unsuccessful due to a fundamental theoretical issue described in the analysis.
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Abstract</div>
+                As the world becomes increasingly online, digital protection becomes increasingly important, necessitating the development of new cryptanalytic techniques. To achieve this, one rapidly developing field of computer science, machine learning, could potentially be made use of. This paper investigated whether neural networks can be used to conduct a preimage attack, in which the original input of a cryptographic hash is extracted given the output. We launched an attack on the hash SHA-1 with neural network chains, which decreased the load on each individual neural network and simultaneously allowed reconstruction of the internal state history and extraction of the preimage. Neural networks of various architectures were constructed and trained on generated, sequential internal state data. Networks corresponding to adjacent rounds were then linked together to result in a preimage attack on reduced SHA-1 as described. The attack was not effective, although results could potentially be improved with larger computational power. Although machine learning and cryptanalysis share many similarities, it is hence more valuable to focus on the development of other cryptanalytic techniques, at least in the area of preimage attacks.
+                <!-- <br>
+                <i>Keywords:</i>  Cryptanalysis, neuro-cryptanalysis, neural networks, hash functions, SHA-1, preimage attacks -->
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Graphical Abstract</div>
+                <img src="../assets/graphical-abstract.png" alt="Graphical version of the process described in abstract section">
+            </div>
+        </div>
+        <div class="stem-section">
+            <div class="stem-heading"><a href="./stem1-proposal.html">Research Proposal</a></div>
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Research Question</div>
+                Can neural networks be used to conduct a preimage attack?
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Hypothesis</div>
+                Linking together multilayer feed-forward neural networks that are individually trained on data from each round of the cryptographic hash SHA-1 will reduce the complexity each network needs to model, allowing reconstruction of the internal state history and extraction of the preimage.
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Graphical Background</div>
+                <img src="../assets/graphical-background.png" alt="Graphical version of the background described in the adjacent section">
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Background</div>
+                <iframe class="stem-frame" src="../docs/stem-background.pdf"></iframe>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Graphical Procedure</div>
+                <img src="../assets/graphical-methods.png" alt="Graphical version of the procedures described in the adjacent section">
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Procedure</div>
+                <iframe class="stem-frame" src="../docs/stem-procedures.pdf"></iframe>
+            </div>
+        </div>
+
+        <div class="stem-section">
+            <div class="stem-heading">Figures</div>
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Table 1. Accuracies and loss for multilayer feed-forward neural networks with varying hyperparameters and training datasets</div>
+                <img src="../assets/stem-table-1.png" alt="Image of the table described in the above caption">
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Table 2. Accuracies and loss for recurrent neural networks with varying hyperparameters and training datasets</div>
+                <img src="../assets/stem-table-2.png" alt="Image of the table described in the above caption">
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="stem-section">
+                <div class="stem-heading">Figure 1. Generated training data of SHA-1 internal states, stored in hexadecimal</div>
+                <img src="../assets/stem-figure-1.png" alt="Picture of CSV of hexadecimal">
+            </div>
+            <div class="stem-section">
+                <div class="stem-heading">Figure 2. Results output for FFNN trained on round 3 data with a standard 100k dataset; results are very similar for RNN</div>
+                <img src="../assets/stem-figure-2.png" alt="Image of results for the model described above; loss is constant and high while accuracy is 0">
+            </div>
+        </div>
+
+        <div class="stem-section">
+            <div class="stem-heading">Analysis</div>
+            <iframe class="stem-frame" src="../docs/stem-analysis.pdf"></iframe>
+        </div>
+
+        <div class="stem-section">
+            <div class="stem-heading">Discussion and Conclusion</div>
+            <iframe class="stem-frame" src="../docs/stem-discussion.pdf"></iframe>
+        </div>
+
+        <div class="stem-section">
+            <div class="stem-heading">References</div>
+            <iframe class="stem-frame" src="../docs/stem-references.pdf"></iframe>
+        </div>
+
+        <div class="stem-section">
+            <div class="stem-heading">February Fair Poster</div>
+            Below is my poster layout and design.
+            <div class="stem-poster">
+                <iframe class="stem-frame" src="../docs/stem-poster-design.pdf"></iframe>
+                <img src="../assets/stem-poster-layout.png" alt="Image of Feb Fair trifold layout with gray boxes">
+            </div>
         </div>
 
         <div class="footer-padding">

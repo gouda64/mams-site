@@ -1,0 +1,57 @@
+.stem-title, .stem-section {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.stem-title {
+    font-size: 2rem; 
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    padding: 0 3rem;
+}
+
+.stem-section {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter */
+    backdrop-filter: brightness(80%);
+    color: white;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.stem-section a {
+    text-decoration: underline;
+}
+
+.stem-heading {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+    backdrop-filter: brightness(120%);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.stem-frame {
+    margin: 0;
+}
+
+.stem-pics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.stem-pics img {
+    width: 32%;
+}
+
+.stem-poster {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
